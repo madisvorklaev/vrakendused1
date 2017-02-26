@@ -25,7 +25,7 @@ echo phpversion('tidy');
     
     
 <p>  <img src="https://lh3.googleusercontent.com/yUpqwYmDEZfw2HOpzXUjF2Fw9WDsFVZtDCnmWbNJDwgJljLDO3qUth3AVnRhVZDVLF68Z-hq9A=w1920-h1080-rw-no" alt="Madise pilt"/></p>
-    
+
 <?php 
     $host = "localhost";
     $user = "test";
