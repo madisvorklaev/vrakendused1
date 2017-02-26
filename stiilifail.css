@@ -6,13 +6,10 @@ h1 {
     color: navy;
     margin-left: 20px;
 }
-<<<<<<< HEAD
-=======
 h2 {
     color: navy;
     margin-left: 20px;
 }
->>>>>>> e75c3b638c0703c1a7d91d2ae338890eb78d7eb6
 div {
     text-align: justify;
 }
@@ -20,11 +17,10 @@ a {
     color: red;
 
 }
-<<<<<<< HEAD
-=======
 .container img {
     width: 10%;
     height: auto;
 }
->>>>>>> e75c3b638c0703c1a7d91d2ae338890eb78d7eb6
-
+table, td, th, tr {
+	border: 1px black 
+}
