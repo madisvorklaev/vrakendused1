@@ -32,6 +32,9 @@ echo phpversion('tidy');
 <h2>Kolmanda nädala harjutused</h2>
 <h3><a href=3_cssbot.html>CSS_Bot</a></h3>
 <h3><a href=3_stiilid.html>Stiilid</a></h3>
+<h2>Neljanda nädala harjutused</h2>
+<h3><a href=4_positioning.html>Duck hunt</a></h3>
+<h3><a href=4_abakus.html>Arvelaud</a></h3>
 
 <h2>Countdown Clock</h2>
 <div id="clockdiv">
