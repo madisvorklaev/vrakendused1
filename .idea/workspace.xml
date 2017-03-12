@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9204da4d-4e92-4286-b15c-90ba820f3772" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stiilifail.css" afterPath="$PROJECT_DIR$/stiilifail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/4_positioning.html" afterPath="$PROJECT_DIR$/4_positioning.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,21 +28,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="629">
               <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="4_positioning.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="4_positioning.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/4_positioning.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="17">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -51,7 +51,7 @@
       <file leaf-file-name="4_abakus.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/4_abakus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="867">
               <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
               <folding />
             </state>
@@ -66,8 +66,8 @@
       <find>div.target</find>
       <find>div.ring</find>
       <find>div:nth-child</find>
-      <find>ring</find>
       <find>100px</find>
+      <find>ring</find>
     </findStrings>
     <replaceStrings>
       <replace>100px</replace>
@@ -75,8 +75,8 @@
       <replace>div.target</replace>
       <replace>div.ring:nth-child</replace>
       <replace>target</replace>
-      <replace>row</replace>
       <replace>(100%-width%)/2</replace>
+      <replace>row</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -92,9 +92,9 @@
       <list>
         <option value="$PROJECT_DIR$/template.html" />
         <option value="$PROJECT_DIR$/4_abakus.html" />
-        <option value="$PROJECT_DIR$/4_positioning.html" />
         <option value="$PROJECT_DIR$/stiilifail.css" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/4_positioning.html" />
       </list>
     </option>
   </component>
@@ -215,7 +215,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1489324987320</updated>
-      <workItem from="1489324989316" duration="9137000" />
+      <workItem from="1489324989316" duration="9917000" />
     </task>
     <task id="LOCAL-00001" summary="4.nädala kodutööd">
       <created>1489333987246</created>
@@ -228,7 +228,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9137000" />
+    <option name="totallyTimeSpent" value="9917000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,22 +287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4_abakus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4_positioning.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stiilifail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
@@ -313,8 +297,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="629">
           <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4_abakus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4_positioning.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding />
         </state>
       </provider>
