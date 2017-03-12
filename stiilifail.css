@@ -59,17 +59,17 @@ table, td, th, tr {
 #part{
 	width: 100%;
 	position: fixed;
-	left: 0%;
-	bottom: 0%;
+	left: 0;
+	bottom: 0;
 }
 #target{
-	width: 300px;
-    height: 300px;
+	width: 100px;
+    height: 100px;
 	position: fixed;
-	margin-left: 500;
-	margin-top: 300;
+	margin-left: 500px;
+	margin-top: 300px;
 }
-#ring{
+.ring{
 	border-radius: 50%;
 	position: absolute;	
 }
@@ -88,7 +88,7 @@ div.ring:nth-child(2){
 	background: red;
 	border-style: solid;
 	border-color: gray;
-	left: (100%-width%)/2;
+	left:(100%-width%)/2;
 	top: (100%-width%)/2;
 }
 div.ring:nth-child(3){
@@ -126,4 +126,34 @@ div.ring:nth-child(6){
 	border-color: gray;
 	left: (100%-width%)/2;
 	top: (100%-width%)/2;
+}
+.bead{
+	height: 50px;
+	width: 50px;
+	margin-top: -25px;
+	background: gray;
+	border-radius: 50%;
+	box-shadow: 0px -11px 23px -3px black inset;
+	float: right;
+}
+.bead2{
+	height: 50px;
+	width: 50px;
+	margin-top: -25px;
+	background: gray;
+	border-radius: 50%;
+	box-shadow: 0px -11px 23px -3px black inset;
+	float: left;
+}
+.row{
+	clear: both;
+	border: solid;
+	border-color: cadetblue;
+	margin-top: 50px;
+}
+#raam{
+	border-style: outset;
+	border-width: 10px;
+	border-color: brown;
+	padding-bottom: 50px;
 }
