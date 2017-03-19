@@ -23,7 +23,7 @@ echo phpversion('tidy');
 <h1>Võrgurakenduste harjutused</h1>
     
 <div class="container">    
-<p><img src="https://lh3.googleusercontent.com/yUpqwYmDEZfw2HOpzXUjF2Fw9WDsFVZtDCnmWbNJDwgJljLDO3qUth3AVnRhVZDVLF68Z-hq9A=w1920-h1080-rw-no" alt="Madise pilt"/></p>
+<p><img src="picture.jpg" alt="Madise pilt"/></p>
 </div>
 
 <h2>Teise nädala harjutused</h2>
@@ -35,6 +35,9 @@ echo phpversion('tidy');
 <h2>Neljanda nädala harjutused</h2>
 <h3><a href=4_positioning.html>Duck hunt</a></h3>
 <h3><a href=4_abakus.html>Arvelaud</a></h3>
+<h2>Viienda nädala harjutused</h2>
+<h3><a href=5_positioning.html>Duck hunt MOVING TARGET</a></h3>
+<h3><a href=5_abakus.html>Arvelaud MOVING TARGET</a></h3>
 
 <h2>Countdown Clock</h2>
 <div id="clockdiv">
