@@ -38,6 +38,8 @@ echo phpversion('tidy');
 <h2>Viienda nädala harjutused</h2>
 <h3><a href=5_positioning.html>Duck hunt MOVING TARGET</a></h3>
 <h3><a href=5_abakus.html>Arvelaud MOVING TARGET</a></h3>
+<h2>Kuuenda nädala harjutused</h2>
+<h3><a href=6_loop.html>jQuery</a></h3>
 
 <h2>Countdown Clock</h2>
 <div id="clockdiv">
