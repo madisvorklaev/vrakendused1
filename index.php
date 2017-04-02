@@ -41,7 +41,7 @@ echo phpversion('tidy');
 <h2>Kuuenda nädala harjutused</h2>
 <h3><a href=6_loop.html>jQuery</a></h3>
 <h2>Seitsmenda nädala harjutused</h2>
-<h3><a href=7_tagurpidilugeja.php>Tagurpidilugeja</a></h3>
+<h3><a href=7_tagurpidilugeja.html>Tagurpidilugeja</a></h3>
 <h3><a href=7_suuralgus.php>Suur algustäht</a></h3>
 <h3><a href=7_include.php>Include</a></h3>
 
