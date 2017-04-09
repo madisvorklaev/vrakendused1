@@ -44,6 +44,7 @@ echo phpversion('tidy');
 <h3><a href=7_tagurpidilugeja.html>Tagurpidilugeja</a></h3>
 <h3><a href=7_suuralgus.php>Suur algustäht</a></h3>
 <h3><a href=7_include.php>Include</a></h3>
+<h2>Kaheksanda nädala harjutused</h2>
 <h3><a href=8_cssform.php>CSS form</a></h3>
 <h3><a href=8_dirs.php>lsdir</a></h3>
 
