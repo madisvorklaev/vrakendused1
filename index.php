@@ -47,6 +47,9 @@ echo phpversion('tidy');
 <h2>Kaheksanda nädala harjutused</h2>
 <h3><a href=8_cssform.php>CSS form</a></h3>
 <h3><a href=8_dirs.php>lsdir</a></h3>
+<h2>Üheksanda nädala harjutused</h2>
+<h3><a href=9_mvc/multipage/index.php>Multipage MVC</a></h3>
+<h3><a href=9_mvc/kontrolleriga/index.php>Controller MVC</a></h3>
 
 <h2>Countdown Clock</h2>
 <div id="clockdiv">
