@@ -52,7 +52,8 @@ echo phpversion('tidy');
 <h3><a href=9_mvc/kontrolleriga/index.php>Controller MVC</a></h3>
 <h2>Kümnenda nädala harjutused</h2>
 <h3><a href=10_cookieform.php>Form with COOKIES</a></h3>
-
+<h2>Üheteistkümnenda nädala harjutused</h2>
+<h3><a href=11_mysql.php>SQL queries</a></h3>
 
 <h2>Countdown Clock</h2>
 <div id="clockdiv">
