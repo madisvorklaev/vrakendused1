@@ -1,0 +1,15 @@
+//<script type="text/javascript">
+
+// Original JavaScript code by Chirp Internet: www.chirp.com.au
+// Please acknowledge use of this code by including this header.
+
+// var today = new Date();
+// var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+var expiry = 3600;
+
+function setCookie(name, value)
+{
+    document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry; //.toGMTString();
+}
+
+//</script>
