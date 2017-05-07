@@ -7,9 +7,12 @@ if (!empty($puurid)):
     Puuris nr. <?php echo ($key);?> asuvad loomad <?php foreach ($loom as $value):?>
 <p><img src="<?php echo $value;?>"></p>
     <?php next ($puurid);?>
-<?php
-endforeach;?>
+<?php endforeach;?>
+    nimedega <?php foreach ($nimed[$key] as $nimi):?>
+    <?php print_r($nimi . " ");?>
+<?php endforeach;?>
 </div>
+<br>
 <?php
 endforeach;
 endif;?>
