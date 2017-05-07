@@ -26,20 +26,20 @@ function logout(){
 function kuva_puurid(){
 	$puurid = array();
 	$puurinr = array();
-	$nimed = array(); //pole vaja
+	$nimed = array(); //nimede jaoks
 	global $connection;
 	$sql="SELECT DISTINCT(puur), nimi FROM 10163348_loomaaed ORDER BY puur";
 	$tulemus=mysqli_query($connection, $sql) or die("Tekkis viga!");
     while ($row = mysqli_fetch_assoc($tulemus)){
         $puurid[$row['puur']] = $puurinr; //loon array, mille igaks elemendiks on tühi array
-        $nimed[$row['puur']] = $puurinr;
+        $nimed[$row['puur']] = $puurinr; //nimede jaoks
 
 }
-    $sql = "SELECT puur, nimi, liik FROM 10163348_loomaaed"; //nimi pole vaja
+    $sql = "SELECT puur, nimi, liik FROM 10163348_loomaaed"; //nimi nimede jaoks
     $tulemus=mysqli_query($connection, $sql) or die("Tekkis viga!");
     while ($row = mysqli_fetch_assoc($tulemus)) {
         array_push($puurid[$row['puur']], $row['liik']); //täidan eelmises tsüklis loodud array elemendid nimedega
-        array_push($nimed[$row['puur']], $row['nimi']);
+        array_push($nimed[$row['puur']], $row['nimi']); //nimede jaoks
 
 }
 /*

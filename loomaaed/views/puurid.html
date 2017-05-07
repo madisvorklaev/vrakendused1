@@ -9,9 +9,9 @@ if (!empty($puurid)):
 <p><img src="<?php echo $value;?>"></p>
     <?php next ($puurid);?>
 <?php endforeach;?>
-    nimedega <?php foreach ($nimed[$key] as $nimi):?>
-    <?php print_r($nimi . " ");?>
-<?php endforeach;?>
+    nimedega <?php foreach ($nimed[$key] as $nimi):?> <!--nimede jaoks !-->
+    <?php print_r($nimi . " ");?> <!--nimede jaoks !-->
+<?php endforeach;?> <!--nimede jaoks !-->
 </div>
 <br>
 <?php
