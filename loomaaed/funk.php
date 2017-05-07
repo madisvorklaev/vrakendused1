@@ -25,27 +25,28 @@ function logout(){
 
 function kuva_puurid(){
 	$puurid = array();
-	$loomad = array();
+	$puurinr = array();
+	$nimed = array(); //pole vaja
+	$nimi = array(); //pole vaja
 	global $connection;
-	$sql="SELECT DISTINCT(puur) FROM 10163348_loomaaed ORDER BY puur";
+	$sql="SELECT DISTINCT(puur), nimi FROM 10163348_loomaaed ORDER BY puur";
 	$tulemus=mysqli_query($connection, $sql);
     while ($row = mysqli_fetch_assoc($tulemus)){
-        $puurid[$row['puur']] = $row['puur'];
+        $puurid[$row['puur']] = $puurinr; //loon array, mille igaks elemendiks on tühi array
+        $nimed[$row['puur']] = $nimi; //pole vaja
 }
-    foreach ($puurid as $puurinumber){
-        $sql="SELECT nimi, liik FROM 10163348_loomaaed WHERE puur = $puurinumber";
-        $tulemus=mysqli_query($connection, $sql);
-        while ($row = mysqli_fetch_assoc($tulemus)){
-            $puurid[$puurinumber][] = $row['nimi'];
-    }}
+    $sql = "SELECT puur, nimi, liik FROM 10163348_loomaaed"; //nimi pole vaja
+    $tulemus=mysqli_query($connection, $sql);
+    while ($row = mysqli_fetch_assoc($tulemus)) {
+        array_push($puurid[$row['puur']], $row['liik']); //täidan eelmises tsüklis loodud array elemendid nimedega
+       // array_push($nimed[$row['puur']], $row['nimi']);
 
+}
+/*
     echo "<pre>";
-    print_r($puurid);
+    print_r($nimed);
     echo"</pre>";
-    echo "<pre>";
-    print_r($loomad);
-    echo"</pre>";
-
+*/
 	include_once('views/puurid.html');
 	
 }
