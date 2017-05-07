@@ -1,10 +1,11 @@
-<!--See leht sai funk.php kuvapuurid() funktsioonis includetud !-->
+<!-- See leht sai funk.php kuvapuurid() funktsioonis includetud !-->
+<!-- tnx @jkoolmei !-->
 <?php
 if (!empty($puurid)):
     foreach($puurid as $key => $loom):
 
 ?>
-<div>
+<div class="puur">
     Puuris nr. <?php echo ($key);?> asuvad loomad <?php foreach ($loom as $value):?>
 <p><img src="<?php echo $value;?>"></p>
     <?php next ($puurid);?>
@@ -13,7 +14,7 @@ if (!empty($puurid)):
     <?php print_r($nimi . " ");?> <!--nimede jaoks !-->
 <?php endforeach;?> <!--nimede jaoks !-->
 </div>
-<br>
+
 <?php
 endforeach;
 endif;?>
