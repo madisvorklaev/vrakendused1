@@ -16,6 +16,9 @@ function logi(){
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         header("Location: ?page=loomad");
     }
+    $req = $_SERVER['REQUEST_METHOD']; //https://www.w3schools.com/php/php_superglobals.asp
+    if ($req == 'GET'){echo "Sisesta kasutajanimi ja parool! (GET - tulid teiselt lehelt)";}
+    if ($req == 'POST'){echo "Sisestasid vale kasutaja või parooli! (POST - oled juba vormi kasutanud)";}
     if (isset($_POST['user']) && isset($_POST['pass'])){
         $user = htmlspecialchars($_POST['user']);
         $user = mysqli_real_escape_string($connection, $user);
@@ -69,6 +72,9 @@ function lisa(){
     if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false) {
         header("Location: ?page=login");
     }
+    $req = $_SERVER['REQUEST_METHOD']; //https://www.w3schools.com/php/php_superglobals.asp
+    if ($req == 'GET'){echo "Sisesta uue looma andmed! (GET - tulid teiselt lehelt)";}
+    if ($req == 'POST'){echo "Midagi jäi sisestamata! (POST - oled juba vormi kasutanud)";}
     if (isset($_POST['nimi']) && isset($_POST['puur'])){
         $nimi = htmlspecialchars($_POST['nimi']);
         $nimi = mysqli_real_escape_string($connection,$nimi);
@@ -77,9 +83,9 @@ function lisa(){
         $liik = "pildid/".htmlspecialchars($_FILES['liik']['name']);
         $liik = mysqli_real_escape_string($connection,$liik);
 
-        $ert = upload($_FILES['liik']['name']);
+        $uploadsuccessful = upload($_FILES['liik']['name']);
 
-        echo "ert".$ert;
+        echo "Upload ".$uploadsuccessful;
 
         $sql = "INSERT INTO `10163348_loomaaed`(`nimi`, `puur`, `liik`) VALUES ('$nimi', '$puur', '$liik') ";
         $tulemus = mysqli_query($connection, $sql);
