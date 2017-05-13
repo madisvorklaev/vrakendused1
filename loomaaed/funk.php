@@ -12,8 +12,23 @@ function connect_db(){
 }
 
 function logi(){
-	// siia on vaja funktsionaalsust (13. nädalal)
-
+    global $connection;
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+        header("Location: ?page=loomad");
+    }
+    if (isset($_POST['user']) && isset($_POST['pass'])){
+        $user = htmlspecialchars($_POST['user']);
+        $user = mysqli_real_escape_string($connection, $user);
+        $pass = htmlspecialchars($_POST['pass']);
+        $pass = mysqli_real_escape_string($connection, $pass);
+        $sql="SELECT id FROM 10163348_kylastajad WHERE username = '$user' AND passw = SHA1('$pass')";
+        $tulemus=mysqli_query($connection, $sql) or die("Tekkis viga!");
+        $vasteid = mysqli_num_rows($tulemus);
+        if ($vasteid > 0){
+            $_SESSION['loggedin'] = true;
+            $_SESSION['user'] = $user;
+            header("Location: ?page=loomad");
+    }}
 	include_once('views/login.html');
 }
 
@@ -40,23 +55,43 @@ function kuva_puurid(){
     while ($row = mysqli_fetch_assoc($tulemus)) {
         array_push($puurid[$row['puur']], $row['liik']); //täidan eelmises tsüklis loodud array elemendid nimedega
         array_push($nimed[$row['puur']], $row['nimi']); //nimede jaoks
-
 }
-/*
-    echo "<pre>";
+/*  echo "<pre>";
     print_r($nimed);
-    echo"</pre>";
-*/
+    echo"</pre>"; */
 	include_once('views/puurid.html');
 	
 }
 
 function lisa(){
 	// siia on vaja funktsionaalsust (13. nädalal)
-	
-	include_once('views/loomavorm.html');
-	
+    global $connection;
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false) {
+        header("Location: ?page=login");
+    }
+    if (isset($_POST['nimi']) && isset($_POST['puur'])){
+        $nimi = htmlspecialchars($_POST['nimi']);
+        $nimi = mysqli_real_escape_string($connection,$nimi);
+        $puur = htmlspecialchars($_POST['puur']);
+        $puur = mysqli_real_escape_string($connection,$puur);
+        $liik = "pildid/".htmlspecialchars($_FILES['liik']['name']);
+        $liik = mysqli_real_escape_string($connection,$liik);
+
+        $ert = upload($_FILES['liik']['name']);
+
+        echo "ert".$ert;
+
+        $sql = "INSERT INTO `10163348_loomaaed`(`nimi`, `puur`, `liik`) VALUES ('$nimi', '$puur', '$liik') ";
+        $tulemus = mysqli_query($connection, $sql);
+        $vastus = mysqli_affected_rows($connection);
+        echo $vastus;
+
+
+
 }
+    include_once('views/loomavorm.html');
+}
+
 
 function upload($name){
 	$allowedExts = array("jpg", "jpeg", "gif", "png");
@@ -83,7 +118,7 @@ function upload($name){
 			}
 		}
 	} else {
-		return "";
+		return "paha";
 	}
 }
 
