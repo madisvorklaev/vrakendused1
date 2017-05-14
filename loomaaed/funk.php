@@ -103,8 +103,8 @@ function upload($name){
 	$allowedExts = array("jpg", "jpeg", "gif", "png");
 	$allowedTypes = array("image/gif", "image/jpeg", "image/png","image/pjpeg");
 	//$extension = end((explode(".", $_FILES[$name]["name"])));
-    $tmp = explode('.', $_FILES[$name]["name"]);
-    $extension = end($tmp);
+    $tmp = explode('.', $_FILES[$name]["name"]); //gitteri soovitus 105. rea asenduseks
+    $extension = end($tmp); //gitteri soovitus 105. rea asenduseks
 
 	if ( in_array($_FILES[$name]["type"], $allowedTypes)
 		&& ($_FILES[$name]["size"] < 100000)
