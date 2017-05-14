@@ -80,17 +80,17 @@ function lisa(){
         $nimi = mysqli_real_escape_string($connection,$nimi);
         $puur = htmlspecialchars($_POST['puur']);
         $puur = mysqli_real_escape_string($connection,$puur);
-        $liik = "pildid/".htmlspecialchars($_FILES['liik']['name']);
+        $liik = "pildid/".htmlspecialchars($_FILES["liik"]["name"]);
         $liik = mysqli_real_escape_string($connection,$liik);
 
-        $uploadsuccessful = upload($_FILES['liik']['name']);
+        $uploadfile = upload($_FILES["liik"]["name"]);
 
-        echo "Upload ".$uploadsuccessful;
+        echo "Upload ".$uploadfile;
 
         $sql = "INSERT INTO `10163348_loomaaed`(`nimi`, `puur`, `liik`) VALUES ('$nimi', '$puur', '$liik') ";
         $tulemus = mysqli_query($connection, $sql);
-        $vastus = mysqli_affected_rows($connection);
-        echo $vastus;
+        $vastus = mysqli_insert_id($connection);
+        echo "<br>mysqli_insert_id = ".$vastus;
 
 
 
@@ -102,7 +102,9 @@ function lisa(){
 function upload($name){
 	$allowedExts = array("jpg", "jpeg", "gif", "png");
 	$allowedTypes = array("image/gif", "image/jpeg", "image/png","image/pjpeg");
-	$extension = end(explode(".", $_FILES[$name]["name"]));
+	//$extension = end((explode(".", $_FILES[$name]["name"])));
+    $tmp = explode('.', $_FILES[$name]["name"]);
+    $extension = end($tmp);
 
 	if ( in_array($_FILES[$name]["type"], $allowedTypes)
 		&& ($_FILES[$name]["size"] < 100000)
