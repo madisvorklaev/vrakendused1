@@ -80,12 +80,8 @@ function lisa(){
         $nimi = mysqli_real_escape_string($connection,$nimi);
         $puur = htmlspecialchars($_POST['puur']);
         $puur = mysqli_real_escape_string($connection,$puur);
-        $liik = "pildid/".htmlspecialchars($_FILES["liik"]["name"]);
-        $liik = mysqli_real_escape_string($connection,$liik);
-
-        $uploadfile = upload($_FILES["liik"]["name"]);
-
-        echo "Upload ".$uploadfile;
+        $liik = "pildid/".htmlspecialchars(upload("liik"));
+        $liik = mysqli_real_escape_string($connection, $liik);
 
         $sql = "INSERT INTO `10163348_loomaaed`(`nimi`, `puur`, `liik`) VALUES ('$nimi', '$puur', '$liik') ";
         $tulemus = mysqli_query($connection, $sql);
