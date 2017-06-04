@@ -1,7 +1,7 @@
 <?php
 $allowedExts = array("jpg", "jpeg", "gif", "png");
 $allowedTypes = array("image/gif", "image/jpeg", "image/png", "image/pjpeg");
-$extension = end(explode(".", $_FILES['pilt']["name"]));
+$extension = end((explode(".", $_FILES['pilt']["name"])));
 $bytes= 100000;
 $loc = "images";
 

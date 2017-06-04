@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>Comments from SQL</title>
+    <title>Comments from SQL // Madis Võrklaev</title>
 </head>
 <body>
 <form name="newcomment" action="" method="post">
     Sinu kommentaar:</br>
 
     <input type="text" name="name" placeholder="Nimi" maxlength="30" required /> Nimi</br>
-    <input type="text" name="comment" placeholder="Sinu kommentaar" maxlength="256" required /> Kommentaar (max 256 tähemärki</br>
+    <input type="text" name="comment" placeholder="Sinu kommentaar" maxlength="256" required /> Kommentaar (max 256 tähemärki)</br>
     <input type="submit" name="querySubmit" value="Saada päring" />
 </form>
 
@@ -16,6 +16,7 @@
 require_once ('functions.php');
 connect_db();
 global $connection;
+
 if (isset($_POST['name'])) {
     $name = mysqli_real_escape_string($connection, htmlspecialchars($_POST['name']));
     $comment = mysqli_real_escape_string($connection, htmlspecialchars($_POST['comment']));
@@ -33,6 +34,8 @@ $exec = mysqli_query($connection,$sqlquery);
 while($row = mysqli_fetch_assoc($exec)) {
     echo "<p>".$row['name']. " - ".$row['comment'];
    }
+
+   getCount();
 ?>
 
 </body>
